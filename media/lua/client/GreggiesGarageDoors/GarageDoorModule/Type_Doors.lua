@@ -51,7 +51,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder3x3 = function(subMenu, player)
   _name = getText 'ContextMenu_Small_Green_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor3x3, _sprite, 16, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Small_Green_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 17)
@@ -59,7 +59,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder3x3 = function(subMenu, player)
   _name = getText 'ContextMenu_Small_White_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor3x3, _sprite, 0, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Small_White_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 1)
@@ -67,7 +67,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder3x3 = function(subMenu, player)
   _name = getText 'ContextMenu_Small_Grey_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor3x3, _sprite, 48, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Small_Grey_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 49)
@@ -78,7 +78,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder3x3 = function(subMenu, player)
   _name = getText 'ContextMenu_Small_Red_Window_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor3x3, _sprite, 32, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Small_Red_Window_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 33)
@@ -86,7 +86,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder3x3 = function(subMenu, player)
   _name = getText 'ContextMenu_Small_Rolling_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor3x3, _sprite, 0, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Small_Rolling_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 1)
@@ -94,7 +94,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder3x3 = function(subMenu, player)
   _name = getText 'ContextMenu_Small_Gray_Window_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor3x3, _sprite, 48, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Small_Gray_Window_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 49)
@@ -150,7 +150,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder4x4 = function(subMenu, player)
   _name = getText 'ContextMenu_Large_White_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor4x4, _sprite, 0, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Large_White_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 1)
@@ -158,7 +158,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder4x4 = function(subMenu, player)
   _name = getText 'ContextMenu_Large_Green_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor4x4, _sprite, 16, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Large_Green_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 17)
@@ -166,7 +166,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder4x4 = function(subMenu, player)
   _name = getText 'ContextMenu_Large_Grey_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor4x4, _sprite, 48, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Large_Grey_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 49)
@@ -179,7 +179,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder4x4 = function(subMenu, player)
   _name = getText 'ContextMenu_Large_Rolling_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor4x4, _sprite, 0, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Large_Rolling_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 1)
@@ -187,7 +187,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder4x4 = function(subMenu, player)
   _name = getText 'ContextMenu_Large_Red_Window_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor4x4, _sprite, 32, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Large_Red_Window_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 33)
@@ -195,7 +195,7 @@ GreggiesGarageDoors.garageDoorMenuBuilder4x4 = function(subMenu, player)
   _name = getText 'ContextMenu_Large_Gray_Window_Garage_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoor4x4, _sprite, 48, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Large_Gray_Window_Garage_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 49)
@@ -251,7 +251,7 @@ GreggiesGarageDoors.garageDoorMenuBuilderFancy = function(subMenu, player)
   _name = getText 'ContextMenu_Fancy_Cheese_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoorFancy, _sprite, 0, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Fancy_Cheese_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 1)
@@ -259,7 +259,7 @@ GreggiesGarageDoors.garageDoorMenuBuilderFancy = function(subMenu, player)
   _name = getText 'ContextMenu_Fancy_Falafel_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoorFancy, _sprite, 32, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Fancy_Falafel_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 33)
@@ -267,13 +267,12 @@ GreggiesGarageDoors.garageDoorMenuBuilderFancy = function(subMenu, player)
   _name = getText 'ContextMenu_Fancy_xCudi_Door'
 
   _option = subMenu:addOption(_name, nil, GreggiesGarageDoors.onBuildGarageDoorFancy, _sprite, 48, player)
-  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, GreggiesGarageDoors.skillLevel.none, _option, player)
+  _tooltip = GreggiesGarageDoors.canBuildObject(GreggiesGarageDoors.skillLevel.garageDoorObject, _option, player)
   _tooltip:setName(_name)
   _tooltip.description = getText 'Tooltip_Fancy_xCudi_Door' .. _tooltip.description
   _tooltip:setTexture(_sprite.sprite .. 49)
 
 end
-
 
 GreggiesGarageDoors.onBuildGarageDoor3x3 = function(whoActuallyCares, sprite, spriteIndex, player)
   local _garageDoor = ISGarageDoor:new1(sprite.sprite, spriteIndex)
