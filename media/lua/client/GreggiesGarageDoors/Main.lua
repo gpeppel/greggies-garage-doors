@@ -11,8 +11,6 @@ GreggiesGarageDoors.playerCanPlaster = false
 GreggiesGarageDoors.textTooltipHeader = ' <RGB:2,2,2> <LINE> <LINE>' .. getText('Tooltip_craft_Needs') .. ' : <LINE> '
 GreggiesGarageDoors.textCarpentryRed = ''
 GreggiesGarageDoors.textCarpentryGreen = ''
-GreggiesGarageDoors.textElectricityRed = ''
-GreggiesGarageDoors.textElectricityGreen = ''
 GreggiesGarageDoors.textCanRotate = '<LINE> <RGB:1,1,1>' .. getText('Tooltip_craft_pressToRotate', Keyboard.getKeyName(getCore():getKey('Rotate building')))
 GreggiesGarageDoors.textDoorFrameDescription = getText('Tooltip_DoorFrame_Description')
 
@@ -53,7 +51,6 @@ GreggiesGarageDoors.doBuildMenu = function(player, context, worldobjects, test)
 
   if GreggiesGarageDoors.haveAToolToBuildWithWith(player) then
     GreggiesGarageDoors.playerCarpentrySkill = getSpecificPlayer(player):getPerkLevel(Perks.Woodwork)
-    GreggiesGarageDoors.playerelectricianSkill = getSpecificPlayer(player):getPerkLevel(Perks.Electricity)
 
     if GreggiesGarageDoors.playerCarpentrySkill > 7 or ISBuildMenu.cheat then
       GreggiesGarageDoors.playerCanPlaster = true
@@ -63,38 +60,34 @@ GreggiesGarageDoors.doBuildMenu = function(player, context, worldobjects, test)
 
     GreggiesGarageDoors.textCarpentryRed = ' <RGB:1,0,0>' .. getText('IGUI_perks_Carpentry') .. ' ' .. GreggiesGarageDoors.playerCarpentrySkill .. '/'
     GreggiesGarageDoors.textCarpentryGreen = ' <RGB:1,1,1>' .. getText('IGUI_perks_Carpentry') .. ' '
-    GreggiesGarageDoors.textElectricityRed = ' <RGB:1,0,0>' .. getText('IGUI_perks_Electricity') .. ' ' .. GreggiesGarageDoors.playerelectricianSkill .. '/'
-    GreggiesGarageDoors.textElectricityGreen = ' <RGB:1,1,1>' .. getText('IGUI_perks_Electricity') .. ' '
     GreggiesGarageDoors.buildMaterialsList(player)
 
-    if GreggiesGarageDoors.playerCarpentrySkill > 6 and GreggiesGarageDoors.playerelectricianSkill > 6 then
     -- Build Garage Door
     -- ****************************************************
-      local _firstTierMenu = context:addOption(getText('ContextMenu_GreggiesGarageDoors'), worldobjects, nil)
-      local _secondTierMenu = ISContextMenu:getNew(context)
-      context:addSubMenu(_firstTierMenu, _secondTierMenu)
+    local _firstTierMenu = context:addOption(getText('ContextMenu_GreggiesGarageDoors'), worldobjects, nil)
+    local _secondTierMenu = ISContextMenu:getNew(context)
+    context:addSubMenu(_firstTierMenu, _secondTierMenu)
 
     -- Small Garage
     -- *****************************************************
-      local _garageOption = _secondTierMenu:addOption(getText('ContextMenu_GreggiesGarageDoors_Small'), worldobjects, nil)
-      local _garageThirdTierMenu = _secondTierMenu:getNew(_secondTierMenu)
-      context:addSubMenu(_garageOption, _garageThirdTierMenu)
-      GreggiesGarageDoors.garageDoorMenuBuilder3x3(_garageThirdTierMenu, player, context, worldobjects)
+    local _garageOption = _secondTierMenu:addOption(getText('ContextMenu_GreggiesGarageDoors_Small'), worldobjects, nil)
+    local _garageThirdTierMenu = _secondTierMenu:getNew(_secondTierMenu)
+    context:addSubMenu(_garageOption, _garageThirdTierMenu)
+    GreggiesGarageDoors.garageDoorMenuBuilder3x3(_garageThirdTierMenu, player, context, worldobjects)
 
     -- Large Garage
     -- *****************************************************
-      local _garageOption2 = _secondTierMenu:addOption(getText('ContextMenu_GreggiesGarageDoors_Large'), worldobjects, nil)
-      local _garageThirdTierMenu2 = _secondTierMenu:getNew(_secondTierMenu)
-      context:addSubMenu(_garageOption2, _garageThirdTierMenu2)
-      GreggiesGarageDoors.garageDoorMenuBuilder4x4(_garageThirdTierMenu2, player, context, worldobjects)
+    local _garageOption2 = _secondTierMenu:addOption(getText('ContextMenu_GreggiesGarageDoors_Large'), worldobjects, nil)
+    local _garageThirdTierMenu2 = _secondTierMenu:getNew(_secondTierMenu)
+    context:addSubMenu(_garageOption2, _garageThirdTierMenu2)
+    GreggiesGarageDoors.garageDoorMenuBuilder4x4(_garageThirdTierMenu2, player, context, worldobjects)
 
     -- Fancy Garage
     -- *****************************************************
-      local _garageOption3 = _secondTierMenu:addOption(getText('ContextMenu_GreggiesGarageDoors_Fancy'), worldobjects, nil)
-      local _garageThirdTierMenu3 = _secondTierMenu:getNew(_secondTierMenu)
-      context:addSubMenu(_garageOption3, _garageThirdTierMenu3)
-      GreggiesGarageDoors.garageDoorMenuBuilderFancy(_garageThirdTierMenu3, player, context, worldobjects)
-    end
+    local _garageOption3 = _secondTierMenu:addOption(getText('ContextMenu_GreggiesGarageDoors_Fancy'), worldobjects, nil)
+    local _garageThirdTierMenu3 = _secondTierMenu:getNew(_secondTierMenu)
+    context:addSubMenu(_garageOption3, _garageThirdTierMenu3)
+    GreggiesGarageDoors.garageDoorMenuBuilderFancy(_garageThirdTierMenu3, player, context, worldobjects)
 
   end
 end
@@ -190,7 +183,7 @@ GreggiesGarageDoors.tooltipCheckForTool = function(tool, tooltip)
   end
 end
 
-GreggiesGarageDoors.canBuildObject = function(carpentry, electricity, option, player)
+GreggiesGarageDoors.canBuildObject = function(carpentry, option, player)
   local _tooltip = ISToolTip:new()
   _tooltip:initialise()
   _tooltip:setVisible(false)
@@ -232,16 +225,6 @@ GreggiesGarageDoors.canBuildObject = function(carpentry, electricity, option, pl
     end
 
     _tooltip.description = _tooltip.description .. carpentry .. ' <LINE>'
-  end
-  if electricity > 0 then
-    if GreggiesGarageDoors.playerelectricianSkill < electricity then
-      _tooltip.description = _tooltip.description .. GreggiesGarageDoors.textElectricityRed
-      _canBuildResult = false
-    else
-      _tooltip.description = _tooltip.description .. GreggiesGarageDoors.textElectricityGreen
-    end
-
-    _tooltip.description = _tooltip.description .. electricity .. ' <LINE>'
   end
 
   if not _canBuildResult and not ISBuildMenu.cheat then
