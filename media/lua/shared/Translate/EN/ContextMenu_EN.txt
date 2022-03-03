@@ -19,4 +19,5 @@ ContextMenu_EN = {
   ContextMenu_Fancy_Cheese_Door = "There's Cheese inside...",
   ContextMenu_Fancy_Falafel_Door = "The Dorito Master",
   ContextMenu_Fancy_xCudi_Door = "xCudi Door",
+  ContextMenu_Fancy_Spiffo_Door = "A Spiffo Themed Garage Door",
 }

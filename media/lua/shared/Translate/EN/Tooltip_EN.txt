@@ -13,5 +13,6 @@ Tooltip_EN = {
   Tooltip_Large_Gray_Window_Garage_Door = "Slightly Larger Grey Windowed Garage Door",
   Tooltip_Fancy_Cheese_Door = "A Cheesy Garage Door",
   Tooltip_Fancy_Falafel_Door = "Create a Garage Door... Responsibly of course",
-  Tooltip_Fancy_xCudi_Door = "Take Me To Your Leader..."
+  Tooltip_Fancy_xCudi_Door = "Take Me To Your Leader...",
+  Tooltip_Fancy_Spiffo_Door = "Factory Fresh!",
 }
